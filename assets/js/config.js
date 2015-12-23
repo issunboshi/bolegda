@@ -11,21 +11,6 @@ System.config({
     "*": "*.js",
     "github:*": "jspm_packages/github/*.js",
     "npm:*": "jspm_packages/npm/*.js"
-  },
-  "bundles": {
-    "dist/bundle": [
-      "github:github/fetch@0.8.2/fetch",
-      "github:goldfire/howler.js@1.1.28/howler",
-      "npm:process@0.11.2/browser",
-      "github:github/fetch@0.8.2",
-      "github:goldfire/howler.js@1.1.28",
-      "npm:process@0.11.2",
-      "github:jspm/nodelibs-process@0.1.2/index",
-      "github:jspm/nodelibs-process@0.1.2",
-      "npm:vue@1.0.12/dist/vue.common",
-      "npm:vue@1.0.12",
-      "app/app"
-    ]
   }
 });
 

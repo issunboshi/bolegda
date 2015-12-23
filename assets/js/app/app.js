@@ -1,10 +1,10 @@
-import 'fetch';
 import 'howler';
 import Vue from 'vue';
 
 var sound = new Howl({
   urls: ['/assets/audio/bolegda-full.mp3'],
   sprite: {
+      full: [0, 600],
       ba: [0, 219],
       le: [220, 260],
       gda: [370, 450]

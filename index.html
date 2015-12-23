@@ -3,19 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Bolegda!</title>
-    <link rel="stylesheet" href="/assets/css/dist/app.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="/assets/css/dist/app.css" media="screen" charset="utf-8">
 </head>
 <body>
     <div class="container">
         <h1>An ode to Bolegda</h1>
 
-        <div id="audio-controls" class="js-audio-controls audio-player" >
-            <button @click="stopClick">Stop</button>
-            <button @click="toggleLoop">Loop</button>
+        <div id="audio-controls" class="js-audio-controls audio-player">
             <div>
+                <h2>The one, the only, the original</h2>
+                <button @click="playClick('full')">Play</button>
+            </div>
+            <div>
+                <h2>Achieve perfect pronunciation in 3 simple steps</h2>
                 <button class="audio-player__button audio-player__button--ba" @click="playClick('ba')">Ba</button>
                 <button class="audio-player__button audio-player__button--le" @click="playClick('le')">Le</button>
                 <button class="audio-player__button audio-player__button--gda" @click="playClick('gda')">Gda</button>
+            </div>
+            <div>
+                <button @click="stopClick">Stop all</button>
+                <button @click="toggleLoop">Loop all</button>
             </div>
         </div>
     </div>
