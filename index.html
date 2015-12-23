@@ -8,19 +8,15 @@
 <body>
     <div class="container">
         <h1>An ode to Bolegda</h1>
-    </div>
-    <div class="container">
-        <img src="/assets/img/bolegda.jpg" alt="">
-    </div>
-    <div class="container">
 
-        <button @click="playClick">Play</button>
-        <button @click="stopClick">Stop</button>
-        <button @click="toggleLoop">Loop</button>
         <div id="audio-controls" class="js-audio-controls audio-player" >
-            <button class="audio-player__button audio-player__button--ba" @click="playClick('ba')">Ba</button>
-            <button class="audio-player__button audio-player__button--le" @click="playClick('le')">Le</button>
-            <button class="audio-player__button audio-player__button--gda" @click="playClick('gda')">Gda</button>
+            <button @click="stopClick">Stop</button>
+            <button @click="toggleLoop">Loop</button>
+            <div>
+                <button class="audio-player__button audio-player__button--ba" @click="playClick('ba')">Ba</button>
+                <button class="audio-player__button audio-player__button--le" @click="playClick('le')">Le</button>
+                <button class="audio-player__button audio-player__button--gda" @click="playClick('gda')">Gda</button>
+            </div>
         </div>
     </div>
 

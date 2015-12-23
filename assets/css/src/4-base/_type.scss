@@ -1,11 +1,18 @@
+.wf-loading {
+	body {
+		opacity: 0;
+	}
+}
+
 body {
-	font-family: arial;
-	font-size: 100%;
+	@include header-font-family;
 	color: $base_grey;
+	font-size: 100%;
+	transition: all 0.25s ease-in-out;
 }
 
 %bold {
-	font-weight: bold;
+	font-weight: 700;
 }
 
 strong, b {
@@ -100,9 +107,9 @@ blockquote {
 
 h1, h2 ,h3, h4, h5, h6 {
 	@extend %text-transform-upper;
-	
-	font-family: 'Nunito', sans-serif;
-	font-weight: normal;
+
+	@include body-font-family;
+	font-weight: 700;
 
 }
 

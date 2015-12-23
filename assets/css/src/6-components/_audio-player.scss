@@ -22,6 +22,8 @@
 .audio-player {
 
     &__button {
+        @include header-font-family;
+        
         -webkit-appearance: none;
         background-color: none;
         background-size: cover;
@@ -30,6 +32,7 @@
         font-size: 30px;
         font-weight: bold;
         height: 300px;
+        margin-bottom: rem(20px);
         width: 300px;
 
         &:hover {

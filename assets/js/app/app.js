@@ -7,7 +7,7 @@ var sound = new Howl({
   sprite: {
       ba: [0, 219],
       le: [220, 260],
-      gda: [370, 400]
+      gda: [370, 450]
   }
 });
 
@@ -18,11 +18,7 @@ var AudioControls = new Vue({
     },
     methods: {
         playClick: function (sprite) {
-            if (sprite) {
-                sound.play(sprite);
-            } else {
-                sound.play();
-            }
+            sound.play(sprite);
         },
         stopClick: function () {
             sound.unload();

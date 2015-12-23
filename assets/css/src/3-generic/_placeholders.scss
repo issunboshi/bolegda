@@ -34,7 +34,7 @@
 //Type placeholders
 
 @mixin body-font-family {
-	font-family: Arial, Helvetica, Verdana, sans-serif;
+	font-family: "john-doe", serif;
 }
 
 %body-font-family {
@@ -42,7 +42,7 @@
 }
 
 @mixin header-font-family {
-	font-family: Arial, Helvetica, Verdana, sans-serif;
+	font-family: "john-doe", serif;
 }
 
 %header-font-family {
