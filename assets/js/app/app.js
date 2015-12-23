@@ -21,7 +21,7 @@ var AudioControls = new Vue({
             sound.play(sprite);
         },
         stopClick: function () {
-            sound.unload();
+            sound.stop();
         },
         toggleLoop: function() {
             sound.loop(true);
