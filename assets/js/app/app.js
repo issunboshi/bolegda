@@ -12,7 +12,6 @@ var sound = new Howl({
         gda: [370, 450]
     },
     onload: function () {
-        debugger;
         removeClass(document.querySelector('.js-audio-controls'), '-inactive');
     }
 });
