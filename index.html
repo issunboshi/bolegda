@@ -3,8 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Bolegda!</title>
+    <link rel="stylesheet" href="/assets/css/dist/app.css" media="screen" title="no title" charset="utf-8">
 </head>
 <body>
-    <h1>An ode to Bolegda</h1>
+    <div class="container">
+        <h1>An ode to Bolegda</h1>
+    </div>
+    <div class="container">
+        <img src="/assets/img/bolegda.jpg" alt="">
+    </div>
+    <div class="container">
+
+        <button @click="playClick">Play</button>
+        <button @click="stopClick">Stop</button>
+        <button @click="toggleLoop">Loop</button>
+        <div id="audio-controls" class="js-audio-controls audio-player" >
+            <button class="audio-player__button audio-player__button--ba" @click="playClick('ba')">Ba</button>
+            <button class="audio-player__button audio-player__button--le" @click="playClick('le')">Le</button>
+            <button class="audio-player__button audio-player__button--gda" @click="playClick('gda')">Gda</button>
+        </div>
+    </div>
+
+    <script>
+        (function(d) {
+            var config = {
+                kitId: 'uol8pno',
+                scriptTimeout: 3000,
+                async: true
+            },
+            h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+    </script>
+    <script type="text/javascript" src="/assets/js/jspm_packages/system.js"></script>
+    <script type="text/javascript" src="/assets/js/config.js"></script>
+    <script type="text/javascript">
+        System.import('app/app');
+    </script>
 </body>
 </html>

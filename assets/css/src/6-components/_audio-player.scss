@@ -1,0 +1,55 @@
+@keyframes flash {
+    0%, 100% {
+        color: white;
+    }
+    50% {
+        color: red;
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    25%, 75% {
+        transform: translate(1px, 2px) rotate(1deg);
+    }
+    50% {
+        transform: translate(2px, 1px) rotate(-1deg);
+    }
+}
+
+.audio-player {
+
+    &__button {
+        -webkit-appearance: none;
+        background-color: none;
+        background-size: cover;
+        border: 0;
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+        height: 300px;
+        width: 300px;
+
+        &:hover {
+            animation: shake 0.25s infinite;
+        }
+
+        &:focus {
+            animation: flash 0.5s infinite;
+        }
+
+        &--ba {
+            background-image: url('/assets/css/dist/img/ba.jpg');
+        }
+
+        &--le {
+            background-image: url('/assets/css/dist/img/le.jpg');
+        }
+
+        &--gda {
+            background-image: url('/assets/css/dist/img/gda.jpg');
+        }
+    }
+}

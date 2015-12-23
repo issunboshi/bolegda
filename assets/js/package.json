@@ -6,13 +6,16 @@
       "events": "npm:events@^1.1.0",
       "fetch": "github:github/fetch@^0.8.2",
       "flux": "npm:flux@^2.1.1",
+      "goldfire/howler.js": "github:goldfire/howler.js@^1.1.28",
       "handlebars": "github:components/handlebars.js@^3.0.3",
+      "howler": "github:goldfire/howler.js@^1.1.28",
       "jeromegn/Backbone.localStorage": "github:jeromegn/Backbone.localStorage@^1.1.16",
       "keymirror": "npm:keymirror@^0.1.1",
       "lodash": "npm:lodash@^3.8.0",
       "react": "npm:react@^0.14.0-alpha2",
       "react-dom": "npm:react-dom@^0.14.0",
-      "velesin/jasmine-jquery": "github:velesin/jasmine-jquery@^2.1.0"
+      "velesin/jasmine-jquery": "github:velesin/jasmine-jquery@^2.1.0",
+      "vue": "npm:vue@^1.0.12"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.1.13",

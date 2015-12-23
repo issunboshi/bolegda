@@ -1,17 +1,34 @@
 import 'fetch';
-import React from 'react';
-import ReactDOM from 'react-dom';
+import 'howler';
+import Vue from 'vue';
 
-import BattleApp from 'modules/components/BattleApp';
+var sound = new Howl({
+  urls: ['/assets/audio/bolegda-full.mp3'],
+  sprite: {
+      ba: [0, 219],
+      le: [220, 260],
+      gda: [370, 400]
+  }
+});
 
-class Battle extends React.Component {
-    render() {
-        return (
-            <div>
-                <BattleApp />
-            </div>
-        )
+var AudioControls = new Vue({
+    el: '#audio-controls',
+    data: {
+        message: 'Hello Vue.js!'
+    },
+    methods: {
+        playClick: function (sprite) {
+            if (sprite) {
+                sound.play(sprite);
+            } else {
+                sound.play();
+            }
+        },
+        stopClick: function () {
+            sound.unload();
+        },
+        toggleLoop: function() {
+            sound.loop(true);
+        }
     }
-}
-
-ReactDOM.render(<Battle />, document.querySelectorAll('.js-song_off')[0]);
+});
