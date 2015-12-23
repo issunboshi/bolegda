@@ -20,10 +20,13 @@
 }
 
 .audio-player {
+    &.-inactive {
+        opacity: 0;
+    }
 
     &__button {
         @include header-font-family;
-        
+
         -webkit-appearance: none;
         background-color: none;
         background-size: cover;
