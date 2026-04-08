@@ -1,0 +1,13 @@
+name = "balegdah"
+compatibility_date = "2026-04-08"
+
+# Pure static site — no Worker script, no `main` entry.
+# Cloudflare serves assets directly with no runtime in the request path.
+
+[assets]
+directory = "./"
+not_found_handling = "404-page"
+
+[[routes]]
+pattern = "balegdah.issunboshi.com"
+custom_domain = true

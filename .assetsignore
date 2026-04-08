@@ -1,0 +1,11 @@
+.git
+.github
+.worktrees
+docs
+node_modules
+wrangler.toml
+.assetsignore
+README.md
+LICENSE
+.editorconfig
+.gitignore
