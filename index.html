@@ -2,46 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bolegda!</title>
-    <link rel="stylesheet" href="/assets/css/dist/app.css" media="screen" charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bolegda</title>
+    <meta name="description" content="An ode to Bolegda. Achieve perfect pronunciation in three simple steps.">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/app.css">
 </head>
 <body>
-    <div class="container">
-        <h1>An ode to Bolegda</h1>
+    <main class="stage" aria-busy="true" data-state="loading">
+        <header class="intro">
+            <p class="eyebrow">An ode to</p>
+            <h1 class="wordmark" aria-label="Bolegda">
+                <span class="wordmark__ba">Bo</span><span class="wordmark__le">le</span><span class="wordmark__gda">gda</span>
+            </h1>
+            <p class="tagline">Achieve perfect pronunciation in three simple steps.</p>
+        </header>
 
-        <div id="audio-controls" class="js-audio-controls audio-player -inactive">
-            <div>
-                <h2>The one, the only, the original</h2>
-                <button @click="playClick('full')">Play</button>
-            </div>
-            <div>
-                <h2>Achieve perfect pronunciation in 3 simple steps</h2>
-                <button class="audio-player__button audio-player__button--ba" @click="playClick('ba')">Ba</button>
-                <button class="audio-player__button audio-player__button--le" @click="playClick('le')">Le</button>
-                <button class="audio-player__button audio-player__button--gda" @click="playClick('gda')">Gda</button>
-            </div>
-            <div>
-                <button @click="stopClick">Stop all</button>
-                <button @click="toggleLoop">Loop all</button>
-            </div>
-        </div>
-    </div>
+        <section class="controls" aria-label="Audio controls">
+            <button class="pill" data-action="play-full" type="button">
+                <span class="pill__label">Play the original</span>
+                <span class="pill__hint">the one, the only</span>
+            </button>
 
-    <script>
-        (function(d) {
-            var config = {
-                kitId: 'uol8pno',
-                scriptTimeout: 3000,
-                async: true
-            },
-            h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-        })(document);
-    </script>
-    <script type="text/javascript" src="/assets/js/jspm_packages/system.js"></script>
-    <script type="text/javascript" src="/assets/js/config.js"></script>
-    <script type="text/javascript">
-        System.import('app/app');
-    </script>
+            <div class="tiles" role="group" aria-label="Syllables">
+                <button class="tile tile--ba"  data-action="play-sprite" data-sprite="ba"  type="button" aria-label="Play Ba">Ba</button>
+                <button class="tile tile--le"  data-action="play-sprite" data-sprite="le"  type="button" aria-label="Play Le">Le</button>
+                <button class="tile tile--gda" data-action="play-sprite" data-sprite="gda" type="button" aria-label="Play Gda">Gda</button>
+            </div>
+
+            <div class="secondary">
+                <button class="ghost" data-action="stop" type="button">Stop</button>
+                <button class="ghost" data-action="loop" type="button" aria-pressed="false">Loop</button>
+            </div>
+        </section>
+
+        <p class="status" role="status" aria-live="polite">Loading sound&hellip;</p>
+    </main>
+
+    <script type="module" src="/assets/app.js"></script>
 </body>
 </html>
