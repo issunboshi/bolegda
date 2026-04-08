@@ -30,8 +30,23 @@ docs/plans/         design docs
 
 ## Deploying
 
-Any static host works — GitHub Pages, Cloudflare Pages, Netlify. Point
-it at the repo root; there is nothing to build.
+Deploys are automated: every push to `master` triggers a GitHub Actions
+workflow that runs `wrangler deploy` and publishes to Cloudflare Workers
+(Static Assets). Live at **https://balegdah.issunboshi.com**.
+
+Relevant files:
+
+- `wrangler.toml` — Worker config, custom domain, asset directory
+- `.assetsignore` — files excluded from the asset upload (docs, CI, etc.)
+- `.github/workflows/deploy.yml` — the deploy pipeline
+
+To deploy manually from a local checkout you'd need `wrangler` installed
+and the same `CLOUDFLARE_API_TOKEN` + `CLOUDFLARE_ACCOUNT_ID` env vars
+set — but the GitHub Actions workflow is the source of truth. Manual
+runs can also be kicked off from the Actions tab via `workflow_dispatch`.
+
+See `docs/plans/cf-workers-deploy.md` for the full rationale (including
+why Workers rather than Pages).
 
 ## History
 
