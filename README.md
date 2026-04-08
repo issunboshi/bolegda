@@ -1,9 +1,9 @@
-# Bolegda
+# Balegdah
 
-An ode to Bolegda. Achieve perfect pronunciation in three simple steps.
+An ode to Balegdah. Achieve perfect pronunciation in three simple steps.
 
 A tiny static site that plays sprite segments of a single mp3: the full
-word, then each syllable — **Ba**, **Le**, **Gda** — individually.
+word, then each syllable — **Ba**, **Le**, **Gdah** — individually.
 
 ## Running locally
 

@@ -3,9 +3,13 @@
 **Status:** in progress
 **Branch:** `feature/static-revival`
 
+> Note: the project is being renamed from "Bolegda" to "Balegdah" (accepted
+> spelling) as part of this revival. The repo directory and audio filename
+> stay as-is; only user-facing text and CSS/JS identifiers change.
+
 ## Purpose
 
-Revive the 2015 Bolegda toy as a zero-build static site. The original used Gulp + JSPM + SystemJS + Vue 1 + node-sass beta — all dead ecosystems. The "app" itself is ~35 lines of meaningful code (an mp3 sprite player with 4 buttons), so the toolchain vastly outweighs the product.
+Revive the 2015 Balegdah toy as a zero-build static site. The original used Gulp + JSPM + SystemJS + Vue 1 + node-sass beta — all dead ecosystems. The "app" itself is ~35 lines of meaningful code (an mp3 sprite player with 4 buttons), so the toolchain vastly outweighs the product.
 
 ## Goals
 
@@ -19,7 +23,7 @@ Revive the 2015 Bolegda toy as a zero-build static site. The original used Gulp 
 
 - No framework (Vue/React/etc.)
 - No bundler, no Sass, no package.json at the root
-- No new features beyond the original four actions (play full, play ba/le/gda, stop, loop)
+- No new features beyond the original four actions (play full, play ba/le/gdah, stop, loop)
 
 ## Design
 
@@ -35,7 +39,7 @@ Revive the 2015 Bolegda toy as a zero-build static site. The original used Gulp 
 --bg:  #000000;   /* Jamaican flag black */
 --ba:  #009B3A;   /* Jamaican flag green */
 --le:  #F5F5F0;   /* off-white */
---gda: #FED100;   /* Jamaican flag yellow */
+--gdah: #FED100;  /* Jamaican flag yellow */
 --fg:  #F5F5F0;
 ```
 

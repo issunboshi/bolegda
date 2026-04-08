@@ -2,7 +2,7 @@
     --bg:   #000000;   /* Jamaican flag black */
     --ba:   #009B3A;   /* Jamaican flag green */
     --le:   #F5F5F0;   /* off-white           */
-    --gda:  #FED100;   /* Jamaican flag yellow */
+    --gdah:  #FED100;   /* Jamaican flag yellow */
     --fg:   #F5F5F0;
     --muted: rgba(245, 245, 240, 0.55);
     --tile-radius: 18px;
@@ -62,7 +62,7 @@ body {
 }
 .wordmark__ba  { color: var(--ba); }
 .wordmark__le  { color: var(--le); }
-.wordmark__gda { color: var(--gda); }
+.wordmark__gdah { color: var(--gdah); }
 
 .tagline {
     margin: 14px 0 0;
@@ -130,7 +130,7 @@ body {
 }
 .tile--ba  { --tile-color: var(--ba); }
 .tile--le  { --tile-color: var(--le); }
-.tile--gda { --tile-color: var(--gda); }
+.tile--gdah { --tile-color: var(--gdah); }
 
 .tile:hover   { filter: brightness(1.05); }
 .tile:active,
@@ -171,8 +171,8 @@ body {
 }
 .ghost:hover { background: rgba(245, 245, 240, 0.06); }
 .ghost[aria-pressed="true"] {
-    background: var(--gda);
-    border-color: var(--gda);
+    background: var(--gdah);
+    border-color: var(--gdah);
     color: #000;
     font-weight: 600;
 }
@@ -193,7 +193,7 @@ body {
 /* ---------- focus ---------- */
 
 :focus-visible {
-    outline: 2px solid var(--gda);
+    outline: 2px solid var(--gdah);
     outline-offset: 3px;
     border-radius: 6px;
 }
